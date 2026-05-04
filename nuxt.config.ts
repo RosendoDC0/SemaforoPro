@@ -1,11 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-
-  // ssr: false,
+  ssr: process.env.NODE_ENV === 'development',
 
   nitro: {
     preset: 'github-pages'
